@@ -37,9 +37,7 @@ export default function ContactPage() {
 
           <div>
             <h3 className="font-semibold text-gray-900">Location</h3>
-            <p className="text-gray-600">
-              Tamil Nadu, India
-            </p>
+            <p className="text-gray-600">Tamil Nadu, India</p>
           </div>
         </div>
 

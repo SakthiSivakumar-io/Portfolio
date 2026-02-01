@@ -29,7 +29,7 @@ export function Footer({
         <div>
           <h4 className="text-white font-semibold mb-3">Contact</h4>
           <p className="text-sm">Tamil Nadu, India</p>
-          <p className="text-sm">sakthi.sivakumar@email.com</p>
+            href="mailto:iamsakthii20@gmail.com"
         </div>
 
       </div>
