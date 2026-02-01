@@ -1,21 +1,21 @@
+import { useContactForm } from "../components/useContactForm";
 export default function ContactPage() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+    <div className="max-w-4xl mx-auto px-6 py-16">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8">
         Contact Me
       </h1>
 
-      <p className="text-gray-600 mb-12 max-w-2xl">
+      <p className="text-gray-600 mb-10 max-w-2xl">
         I’m always open to discussing opportunities, inventory analytics,
         SAP MM roles, or data-driven projects. Feel free to reach out.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-12">
-        {/* LEFT: CONTACT DETAILS */}
-        <div className="space-y-8">
-          {/* EMAIL */}
+      <div className="grid md:grid-cols-2 gap-10">
+        {/* Contact Info */}
+        <div className="space-y-6">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+            <h3 className="font-semibold text-gray-900">Email</h3>
             <a
               href="mailto:iamsakthii20@gmail.com"
               className="text-blue-600 hover:underline"
@@ -24,11 +24,10 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* LINKEDIN */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-1">LinkedIn</h3>
+            <h3 className="font-semibold text-gray-900">LinkedIn</h3>
             <a
-              href="https://www.linkedin.com/in/sakthi-sivakumar"
+              href="https://www.linkedin.com/in/sakthi-sivakumar-540125244"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:underline"
@@ -37,49 +36,39 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* LOCATION */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
+            <h3 className="font-semibold text-gray-900">Location</h3>
             <p className="text-gray-600">Tamil Nadu, India</p>
           </div>
         </div>
 
-        {/* RIGHT: CONTACT FORM (Formspree-ready) */}
-        <form
-          className="space-y-6 border rounded-xl p-8 shadow-sm bg-white"
-          method="POST"
-          action="#"  // ⬅ will be replaced with Formspree URL next
-        >
+        {/* Contact Form (const { handleSubmit } = useContactForm();) */}
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <input
             type="text"
-            name="name"
-            required
             placeholder="Your Name"
-            className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500"
           />
 
           <input
             type="email"
-            name="email"
-            required
             placeholder="Your Email"
-            className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500"
           />
 
           <textarea
-            name="message"
-            required
-            rows={5}
             placeholder="Your Message"
-            className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            rows={5}
+            className="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500"
           />
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            Send Message
-          </button>
+           className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+        >
+          Send Message
+       </button>
+
         </form>
       </div>
     </div>
