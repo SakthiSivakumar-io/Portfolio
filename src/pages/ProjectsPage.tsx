@@ -149,6 +149,60 @@ export default function ProjectsPage() {
               ✔ Improved inventory credibility and control
             </p>
           </div>
+{/* PROJECT 3 */}
+<div className="border rounded-xl p-8 shadow-sm bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+  <h2 className="text-2xl font-semibold mb-2">
+    SAP MM Inventory Flow Analysis (GRN → Consumption → Reconciliation)
+  </h2>
+
+  <p className="text-sm text-gray-500 mb-4">
+    Inventory Analyst · SAP MM & MIS · Manufacturing Environment
+  </p>
+
+  <h3 className="font-semibold mb-1">Objective</h3>
+  <p className="text-gray-600 mb-4">
+    To analyze the end-to-end SAP MM inventory flow from Goods Receipt (GRN)
+    to production consumption and reconciliation, identifying stock variances
+    impacting inventory accuracy, financial reporting, and audit compliance.
+  </p>
+
+  <h3 className="font-semibold mb-1">Approach</h3>
+  <p className="text-gray-600 mb-4">
+    Modeled SAP MM inventory data to track GRN postings, production consumption,
+    and physical stock verification. A Power BI MIS dashboard was developed to
+    visualize quantity and value-based variances.
+  </p>
+
+  <h3 className="font-semibold mb-1">Key Analysis</h3>
+  <ul className="list-disc list-inside text-gray-600 mb-4">
+    <li>Compared GRN and consumption trends over time</li>
+    <li>Identified material-level stock discrepancies</li>
+    <li>Evaluated financial impact of inventory variances</li>
+    <li>Applied plant and storage-location filters for control analysis</li>
+  </ul>
+
+  <h3 className="font-semibold mb-1">Outcome & Impact</h3>
+  <ul className="list-disc list-inside text-gray-700 mb-4">
+    <li>Improved visibility into SAP MM inventory movement</li>
+    <li>Enabled quicker identification of discrepancy-prone materials</li>
+    <li>Supported audit reconciliation and corrective actions</li>
+    <li>Strengthened inventory control and reporting reliability</li>
+  </ul>
+
+  <h3 className="font-semibold mb-1">Tools Used</h3>
+  <div className="flex flex-wrap gap-2">
+    {["SAP MM", "Power BI", "Advanced Excel", "MIS Reporting"].map(
+      (tool) => (
+        <span
+          key={tool}
+          className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm"
+        >
+          {tool}
+        </span>
+      )
+    )}
+  </div>
+</div>
 
         </div>
       </div>
