@@ -1,16 +1,50 @@
+import { motion } from "framer-motion";
 import PageWrapper from "../components/PageWrapper";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: "easeOut" },
+  },
+};
 
 export default function SkillsPage() {
   return (
     <PageWrapper>
       <div className="max-w-6xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-10">
+        {/* Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-bold text-gray-900 mb-10"
+        >
           Skills & Expertise
-        </h1>
+        </motion.h1>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Skills Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+          className="grid md:grid-cols-2 gap-8"
+        >
           {/* Inventory & SAP */}
-          <div className="border rounded-lg p-6">
+          <motion.div
+            variants={cardVariants}
+            className="border rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition"
+          >
             <h2 className="text-xl font-semibold text-blue-600 mb-4">
               Inventory & SAP MM
             </h2>
@@ -22,10 +56,13 @@ export default function SkillsPage() {
               <li>Physical vs System Stock Reconciliation</li>
               <li>Material Master & Vendor Master Data</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Audit & Compliance */}
-          <div className="border rounded-lg p-6">
+          <motion.div
+            variants={cardVariants}
+            className="border rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition"
+          >
             <h2 className="text-xl font-semibold text-blue-600 mb-4">
               Audit & Compliance
             </h2>
@@ -36,10 +73,13 @@ export default function SkillsPage() {
               <li>Documentation & Audit Reporting</li>
               <li>Process Validation & Control Checks</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Data & Reporting */}
-          <div className="border rounded-lg p-6">
+          <motion.div
+            variants={cardVariants}
+            className="border rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition"
+          >
             <h2 className="text-xl font-semibold text-blue-600 mb-4">
               Data, MIS & Reporting
             </h2>
@@ -50,10 +90,13 @@ export default function SkillsPage() {
               <li>Trend & Variance Analysis</li>
               <li>Data Accuracy & Validation</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Tools & Soft Skills */}
-          <div className="border rounded-lg p-6">
+          <motion.div
+            variants={cardVariants}
+            className="border rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition"
+          >
             <h2 className="text-xl font-semibold text-blue-600 mb-4">
               Tools & Professional Skills
             </h2>
@@ -64,8 +107,8 @@ export default function SkillsPage() {
               <li>Cross-functional Coordination</li>
               <li>Problem Solving & Process Improvement</li>
             </ul>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </PageWrapper>
   );
