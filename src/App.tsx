@@ -40,6 +40,8 @@ export default function App() {
 
 /* ---------------- NAVIGATION ---------------- */
 
+import { useState } from "react";
+
 function Navigation({
   currentPage,
   setCurrentPage,
@@ -60,13 +62,16 @@ function Navigation({
   ];
 
   return (
-    <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
+    <nav className="bg-white border-b sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
-
+        
         {/* Logo */}
         <div
           className="text-xl font-bold text-blue-600 cursor-pointer"
-          onClick={() => setCurrentPage("home")}
+          onClick={() => {
+            setCurrentPage("home");
+            setOpen(false);
+          }}
         >
           Sakthi Sivakumar
         </div>
@@ -77,7 +82,7 @@ function Navigation({
             <button
               key={item.id}
               onClick={() => setCurrentPage(item.id)}
-              className={`text-sm font-medium ${
+              className={`text-sm font-medium transition-colors ${
                 currentPage === item.id
                   ? "text-blue-600 border-b-2 border-blue-600"
                   : "text-gray-600 hover:text-blue-600"
@@ -88,32 +93,36 @@ function Navigation({
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-2xl focus:outline-none"
-          >
-            ⋮
-          </button>
-        </div>
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden text-gray-700 text-2xl"
+          onClick={() => setOpen(!open)}
+        >
+          ☰
+        </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-white border-t">
-          {navItems.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => {
-                setCurrentPage(item.id);
-                setOpen(false);
-              }}
-              className="px-6 py-3 text-gray-700 hover:bg-gray-100 cursor-pointer"
-            >
-              {item.label}
-            </div>
-          ))}
+          <div className="flex flex-col px-4 py-3 space-y-3">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  setCurrentPage(item.id);
+                  setOpen(false);
+                }}
+                className={`text-left text-sm font-medium ${
+                  currentPage === item.id
+                    ? "text-blue-600"
+                    : "text-gray-700"
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </nav>
