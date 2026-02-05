@@ -4,7 +4,7 @@ export function Footer({
   setCurrentPage: (page: string) => void;
 }) {
   return (
-    <footer className="bg-slate-900 text-gray-300 py-12">
+    <footer className="bg-slate-900 text-gray-300 py-12 mt-16">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
         {/* Brand */}
@@ -12,7 +12,7 @@ export function Footer({
           <h3 className="text-white text-xl font-bold mb-3">
             Sakthi Sivakumar
           </h3>
-          <p className="text-sm leading-relaxed">
+          <p className="text-sm">
             Inventory Analyst | SAP MM | Audit & MIS | Data & Reporting
           </p>
         </div>
@@ -51,12 +51,10 @@ export function Footer({
         {/* Contact */}
         <div>
           <h4 className="text-white font-semibold mb-3">Contact</h4>
-
-          <p className="text-sm mb-2">Tamil Nadu, India</p>
-
+          <p className="text-sm">Tamil Nadu, India</p>
           <a
             href="mailto:iamsakthii20@gmail.com"
-            className="text-sm text-blue-400 hover:text-blue-300 hover:underline"
+            className="text-sm text-blue-400 hover:underline block mt-1"
           >
             iamsakthii20@gmail.com
           </a>
@@ -64,8 +62,7 @@ export function Footer({
 
       </div>
 
-      {/* Footer bottom */}
-      <div className="mt-10 text-center text-xs text-gray-400">
+      <div className="text-center text-xs text-gray-500 mt-10">
         © {new Date().getFullYear()} Sakthi Sivakumar. All rights reserved.
       </div>
     </footer>

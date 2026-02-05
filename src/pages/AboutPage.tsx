@@ -18,9 +18,7 @@ export default function AboutPage() {
             <span className="font-medium text-gray-800">
               SAP MM
             </span>
-            , internal audits, and MIS reporting. I work at the intersection of
-            operations, data, and systems to ensure inventory accuracy and
-            process efficiency.
+            , internal audits, and MIS reporting.
           </p>
 
           <p>
@@ -30,19 +28,15 @@ export default function AboutPage() {
             </span>
             , I have been involved in stock reconciliation, variance analysis,
             audit support, and SAP-driven reporting across manufacturing
-            environments. My work focuses on identifying gaps, improving
-            controls, and enabling better decision-making through clean,
-            reliable data.
+            environments.
           </p>
 
           <p>
-            I have a strong interest in{" "}
+            I am transitioning towards{" "}
             <span className="font-medium text-gray-800">
               data-driven roles
             </span>{" "}
-            and continuously work on improving my skills in analytics,
-            reporting, and automation—while maintaining a solid foundation in
-            SAP and inventory operations.
+            while maintaining a strong SAP and inventory foundation.
           </p>
         </div>
 
@@ -53,21 +47,21 @@ export default function AboutPage() {
             </h3>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               <li>Inventory control & reconciliation</li>
-              <li>SAP MM (P2P, GR/IR, stock management)</li>
-              <li>Internal audit & compliance support</li>
-              <li>MIS & management reporting</li>
+              <li>SAP MM operations</li>
+              <li>Internal audit support</li>
+              <li>MIS & reporting</li>
             </ul>
           </div>
 
           <div className="border rounded-lg p-6">
             <h3 className="text-xl font-semibold mb-2 text-gray-900">
-              What I’m Growing Into
+              What I’m Learning
             </h3>
             <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Advanced Excel & reporting automation</li>
-              <li>Data analysis & visualization</li>
-              <li>Process improvement using insights</li>
-              <li>Business-focused analytics</li>
+              <li>Advanced Excel</li>
+              <li>Data analysis</li>
+              <li>Automation</li>
+              <li>Business analytics</li>
             </ul>
           </div>
         </div>
